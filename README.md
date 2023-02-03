@@ -9,6 +9,9 @@ Art Gallery Finder is a web application that provides information about art gall
 - Display the locations of the galleries on a map
 - Show details about each gallery such as its name, address, and type of art it exhibits
 
+## App Preview
+![App Preview](link/to/your/gif/file.gif)
+
 ## Technologies Used
 - HTML
 - CSS
