@@ -1,0 +1,22 @@
+# This is a comment line indicating the purpose of this file
+
+# Package name and version number
+flask==1.0.2
+
+# Package name and version number
+folium==0.10.1
+
+# Package name and version number
+pandas==0.25.3
+
+# Package name and version number
+numpy==1.18.1
+
+# Package name and version number
+geopy==1.20.0
+
+# Package name and version number
+jquery==3.6.0
+
+# Package name and version number
+bootstrap==4.0.0
