@@ -15,3 +15,5 @@ Folium
 pip install flask pandas folium
 
 ```
+Running the Project
+To run the project, clone the repository and run the following command in the terminal:
