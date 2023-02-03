@@ -1,0 +1,6 @@
+John Doe,johndoe@example.com
+Jane Doe,janedoe@example.com
+Bob Smith,bobsmith@example.com
+MMM,msadriddinov1994+amc@gmail.com
+jack,msadriddinov@murraystate.edu
+lolll,msadriddinov1994@gmail.com

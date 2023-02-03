@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6;
+}
+
+#container {
+  background-color: #F2F2F2;
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center
+}
+#card {
+    background-color: #e6e6e6;
+}
+
+.data-table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.data-table td, .data-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

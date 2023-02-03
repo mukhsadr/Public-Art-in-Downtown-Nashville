@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <title>Art Galleries in Nashville</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+  function search() {
+    const searchInput = document.getElementById("search-input").value;
+    console.log(searchInput);
+    $.ajax({
+      type: "POST",
+      url: "/search",
+      data: JSON.stringify({ searchInput: searchInput }),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data) {
+        console.log(data);
+        // update the map with the filtered data
+        // you may need to parse the data from the response to a format that can be used by folium
+      },
+      error: function (error) {
+        console.error(error);
+      },
+    });
+  }
+</script>
+
+</head>
+<body>
+  <h1>Art Galleries in Nashville</h1>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2 p-0">
+        <div class="d-flex flex-column bg-light border-right" id="sidebar">
+          <form class="p-3">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search...">
+            </div>
+          </form>
+          <div class="p-3">
+            <h4>Types</h4>
+            <div id="types-container">
+              {% for type in types %}
+                <button class="btn btn-outline-secondary btn-block">{{ type }}</button>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 p-0">
+        {{ map|safe }}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
