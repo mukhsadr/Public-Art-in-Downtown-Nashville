@@ -1,3 +1,4 @@
+remote_theme:minima
 # Art Gallery Finder
 
 ## Introduction
