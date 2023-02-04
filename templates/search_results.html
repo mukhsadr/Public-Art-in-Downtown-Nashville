@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Location</th>
+      <th>Medium</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for data_item in data_items %}
+    <tr>
+      <td>{{ data_item.title }}</td>
+      <td>{{ data_item.last_name }}</td>
+      <td>{{ data_item.first_name }}</td>
+      <td>{{ data_item.location }}</td>
+      <td>{{ data_item.medium }}</td>
+      <td>{{ data_item.type }}</td>
+      <td>{{ data_item.description }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

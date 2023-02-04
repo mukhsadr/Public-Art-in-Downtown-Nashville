@@ -9,7 +9,8 @@
   <title>Art Galleries in Nashville</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-  function search() {
+
+    function search() {
     const searchInput = document.getElementById("search-input").value;
     console.log(searchInput);
     $.ajax({
@@ -17,18 +18,18 @@
       url: "/search",
       data: JSON.stringify({ searchInput: searchInput }),
       contentType: "application/json; charset=utf-8",
-      dataType: "json",
+      dataType: "html",
       success: function (data) {
         console.log(data);
-        // update the map with the filtered data
-        // you may need to parse the data from the response to a format that can be used by folium
-      },
-      error: function (error) {
-        console.error(error);
-      },
+        document.getElementById("map").innerHTML = data;
+      }
     });
   }
-</script>
+  document.getElementById("search-button").addEventListener("click", function() {
+  search();
+});
+
+  </script>
 
 </head>
 <body>
@@ -40,7 +41,9 @@
         <div class="d-flex flex-column bg-light border-right" id="sidebar">
           <form class="p-3">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search...">
+              <input type="text" id="search-input" class="form-control" placeholder="Search...">
+              <br>
+              <button id="search-button" class="btn btn-primary" onclick="search()">Search</button>
             </div>
           </form>
           <div class="p-3">
