@@ -11,7 +11,7 @@ Art Gallery Finder is a web application that provides information about art gall
 - Show details about each gallery such as its name, address, and type of art it exhibits
 
 ## App Preview
-![App Preview](link/to/your/gif/file.gif)
+![App Preview](https://github.com/mukhsadr/Public-Art-in-Downtown-Nashville/blob/master/static/ArtGallerryFinder.gif)
 
 ## Technologies Used
 - HTML
